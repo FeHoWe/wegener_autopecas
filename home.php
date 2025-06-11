@@ -41,9 +41,18 @@ try {
   <link rel="stylesheet" href="wegener_autopecas.css">
   <link rel="stylesheet" href="produtos_wegener.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  
+  <style>
+    .header_principal {
+      background-color: #999;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+
 </head>
 <body>
-  <header class="p-3 border-bottom">
+  <header class="header_principal">
     <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
       <div class="d-flex align-items-center">
         <img src="logo_wegener.png" alt="Logo Wegener" class="logo-personalizada">
