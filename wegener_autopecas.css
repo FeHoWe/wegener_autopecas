@@ -1,0 +1,319 @@
+/* Reset básico e base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Wrapper da navegação */
+.nav-wrapper {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 600px) {
+    .nav-wrapper {
+        padding: 10px;
+    }
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    flex-wrap: wrap;
+}
+
+.logo-personalizada {
+    width: 250px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+header h1 {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 1.5em;
+}
+
+.login-links {
+    padding-right: 20px;
+}
+
+.login-links a {
+    margin-left: 10px;
+    color: #ff0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navegação principal */
+nav {
+    margin: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    color: #ff0000;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    background-color: #ff0000;
+}
+
+/* Hero section */
+.hero {
+    background-color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 2em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #000000;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Carrinho */
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-box {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background: white;
+    border: 1px solid #ccc;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-radius: 8px;
+}
+
+.cart-box h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.cart-box .close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.cart-box .close:hover {
+    color: #000;
+}
+
+.cart-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-box li {
+    margin: 10px 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.subtotal,
+.total {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Botão de finalização */
+.checkout {
+    background-color: #00a859;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout:hover {
+    background-color: #008f4f;
+}
+
+/* Responsividade adicional */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header h1,
+    .login-links {
+        padding: 5px 0;
+    }
+
+    .cart-box {
+        width: 90vw;
+        right: 5vw;
+    }
+}
+
+/* Menu superior estilizado */
+.menu-superior {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 20px;
+    flex-wrap: wrap;
+}
+
+/* Botões de navegação */
+.menu-superior a,
+#btn-menu {
+    color: #000000;
+    text-decoration: none;
+    font-weight: normal;
+    padding: 12px 24px;
+    border-radius: 6px;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.menu-superior a:hover,
+#btn-menu:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
+}
+
+.menu-icon {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    .menu-superior {
+        justify-content: center;
+        padding-left: 0;
+    }
+}
+
+/* Menu lateral */
+.menu-categorias {
+    position: relative;
+    margin: 20px;
+}
+
+.menu-lateral {
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: white;
+    width: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    padding: 15px;
+    border-radius: 4px;
+    z-index: 999;
+}
+
+.menu-lateral h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 15px 0;
+}
+
+.menu-lateral ul li {
+    margin: 5px 0;
+}
+
+.menu-lateral ul li a {
+    color: #111;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu-lateral ul li a:hover {
+    color: #000000;
+}
+
+@media (max-width: 600px) {
+    .menu-lateral {
+        width: 90vw;
+    }
+}
+
+/* Cards responsivos e com alinhamento uniforme */
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Fundo da parte inferior */
+.conteudo-inferior {
+
+    background: linear-gradient(to right, #000000, #5a0000);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+

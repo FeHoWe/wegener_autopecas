@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Produtos</title>
+    <!-- Link para o Bootstrap 4.5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="produtos_input.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Adicionar Novo Produto</h1>
+
+        <form action="adicionar_produtos.php" method="POST" enctype="multipart/form-data">
+            <fieldset class="border p-4">
+                <legend class="w-auto">Informações do Produto</legend>
+
+                <div class="form-group">
+                    <label for="nome">Nome do Produto:</label>
+                    <input type="text" id="nome" name="nome" class="form-control" required placeholder="Ex.: Parafuso de Aço">
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" class="form-control" required placeholder="Descreva o produto..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="preco">Preço (R$):</label>
+                    <input type="number" id="preco" name="preco" class="form-control" required step="0.01" min="0" placeholder="Ex.: 49.99">
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria" class="form-control" required>
+                        <option value="">Selecione uma categoria</option>
+                        <option value="1">Amortecedor</option>
+                        <option value="2">Lubrificantes</option>
+                        <option value="3">Pivô</option>
+                        <option value="4">Terminal de direção</option>
+                        <option value="5">Flexível de freio</option>
+                        <option value="6">Cilindro Mestre</option>
+                        <option value="7">Cilindro de Roda</option>
+                        <option value="8">Servo de Freio</option>
+                        <option value="9">Kit de Embreagem</option>
+                        <option value="10">Disco de Freio</option>
+                        <option value="11">Pastilha de Freio</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="imagem">Imagem do Produto:</label>
+                    <input type="file" id="imagem" name="imagem" class="form-control-file" accept="image/png, image/jpeg" required>
+                </div>
+            </fieldset>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Adicionar Produto" class="btn btn-primary">
+            </div>
+        </form>
+
+        <a href="home.php" class="btn btn-secondary mt-3">Voltar para Home</a>
+    </div>
+
+    <!-- Script para o Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

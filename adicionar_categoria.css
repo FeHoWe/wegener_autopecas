@@ -1,0 +1,90 @@
+/* Fundo geral */ 
+body {
+    background: linear-gradient(to right, #000000, #5a0000);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container centralizado */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #1c1c1c;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    box-sizing: border-box;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: #ff0000;
+    margin-bottom: 30px;
+}
+
+/* Inputs */
+.form-control {
+    background-color: #2e2e2e;
+    border: 1px solid #ff0000;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.form-control:focus {
+    background-color: #2e2e2e;
+    border-color: #ff0000;
+    color: #fff;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Labels */
+.form-label {
+    color: #fff;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #ff0000;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #cc0000;
+}
+
+.btn-secondary {
+    background-color: #333;
+    border: 1px solid #fff;
+    color: #fff;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+/* Alerta de erro */
+.alert-danger {
+    background-color: #660000;
+    border-color: #ff0000;
+    color: #fff;
+}
+
+/* Feedback de validação */
+.invalid-feedback {
+    color: #ff4d4d;
+}

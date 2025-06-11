@@ -1,0 +1,150 @@
+/* Fundo geral */
+body {
+    background: linear-gradient(to right, #000000, #5a0000);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container geral que permite cards largos */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: #ff0000;
+    margin-bottom: 30px;
+}
+
+/* Inputs */
+.form-control {
+    background-color: #2e2e2e;
+    border: 1px solid #ff0000;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #aaa;
+}
+
+.form-control:focus {
+    background-color: #2e2e2e;
+    border-color: #ff0000;
+    color: #fff;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+/* Labels */
+.form-label {
+    color: #fff;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: #ff0000;
+    border: none;
+    transition: background 0.3s ease;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #cc0000;
+}
+
+.btn-secondary {
+    background-color: #333;
+    border: 1px solid #fff;
+    color: #fff;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+.btn-success,
+.btn-danger {
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* Alerta de erro */
+.alert-danger {
+    background-color: #660000;
+    border-color: #ff0000;
+    color: #fff;
+}
+
+/* Feedback de validação */
+.invalid-feedback {
+    color: #ff4d4d;
+}
+
+/* Container principal em grid */
+.produtos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+/* Card de produto */
+.produto {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagens dos produtos padronizadas */
+.produto img {
+  width: 100%;
+  height: 180px; /* Ajuste aqui se quiser maior/menor */
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Título do produto */
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Descrição e preço */
+.card-text {
+    color: #444;
+}
+
+.card-text strong {
+    color: #135a00;
+}
+
+/* Status */
+.ativo {
+    color: green;
+    font-weight: bold;
+}
+
+.inativo {
+    color: red;
+    font-weight: bold;
+}
